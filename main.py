@@ -9,7 +9,7 @@ logging.basicConfig(
     )
 logger = logging.getLogger
 
-
+# dummy comment 
 
 init_db ()
 flag = True
