@@ -7,7 +7,7 @@ TABLE_NAME = "cart_itema"
 #logging
 LEVEL = logging.INFO
 
-LOGGING_FOR = "%(asctime)s - %(levelname)s - Line:%(lineno)d - %(message)s"
+LOGGING_FORMAT = "%(asctime)s - %(levelname)s - Line:%(lineno)d - %(message)s"
 
 MENUE_OPTIONS = [
       ("1","Add Item"),

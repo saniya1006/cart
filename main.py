@@ -1,13 +1,13 @@
 import logging
-from config import LOGGING_FOR, LEVEL
+from config import LOGGING_FORMAT, LEVEL
 from database import init_db, load_cart,save_cart 
 from utils import add_item_to_cart,calculation,remove_item,search_cart,update_quantity,print_menue,exit_program,clear_cart,check_duplicate,cart_view
 
 logging.basicConfig(
     level=LEVEL,
-    format=LOGGING_FOR
+    format=LOGGING_FORMAT
     )
-logger = logging.getLogger
+logger = logging.getLogger(__name__)
 
 # dummy comment 
 
@@ -27,9 +27,8 @@ while flag:
         if check_duplicate(cart, item):
             logger.warning(f"Item '{item}' already exists in cart!")
         else:
-            cart = add_item_to_cart(item)
+            cart = cart + add_item_to_cart(item)
         
-
     elif user_input == "2":
         clear_cart(cart)
         
