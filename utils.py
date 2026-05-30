@@ -1,4 +1,5 @@
 import logging
+import time
 from config import MENUE_OPTIONS
 logger= logging.getLogger(__name__)
 cart = []
@@ -8,7 +9,7 @@ def check_duplicate(cart, item):
             return True
     return False
 
-def add_item_to_cart (item):
+def add_item_to_cart ( cart,item):
     while True:
         try:
             price = float(input("item price: "))
