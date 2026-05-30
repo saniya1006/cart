@@ -27,7 +27,8 @@ while flag:
         if check_duplicate(cart, item):
             logger.warning(f"Item '{item}' already exists in cart!")
         else:
-            cart = cart + add_item_to_cart(item)
+            #Fixed: pass cart directly, mutations happen in place inside utils
+            add_item_to_cart(cart, item)
         
     elif user_input == "2":
         clear_cart(cart)

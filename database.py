@@ -32,7 +32,7 @@ def load_cart():
         cursor = conn.cursor()
         cursor.execute("SELECT item , price, quantity FROM cart_items")
         rows = cursor.fetchall()
-        conn.close
+        conn.close()
 
         cart = []
         for row in rows:
